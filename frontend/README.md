@@ -1,4 +1,4 @@
-## APTOS UBI HACKATON PROJECT 👋
+# React + TypeScript + Vite
 
 make sure that Aptos wallet (extension) is installed!
 
