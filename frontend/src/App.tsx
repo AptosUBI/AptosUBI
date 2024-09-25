@@ -48,7 +48,7 @@ function App() {
           (r) => r.type === "0x1::coin::CoinStore<0x1::aptos_coin::AptosCoin>"
         );
         if (accountResource && "data" in accountResource) {
-          setBalance(accountResource.data.coin.value);
+          setBalance((accountResource.data as any).coin.value);
         }
       } catch (error) {
         console.error("Error fetching balance:", error);
@@ -63,7 +63,7 @@ function App() {
         <button onClick={connectWallet}>Connect Wallet</button>
       ) : (
         <div>
-          <p>Connected Address: {account?.address}</p>
+          <p>Connected Address: {(account as any)?.address}</p>
           <p>Balance: {balance} octas</p>
         </div>
       )}
