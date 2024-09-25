@@ -17,7 +17,7 @@ https://dorahacks.io/hackathon/code-collision/buidl
 
 _Inspired by Daniel Larimer and his past research. [ DLR ]_
 
-Vision for Aptos: The World's Most Production-Ready Blockchain**, rewarding its users universally.**
+Vision for Aptos: The World's Most Production-Ready Blockchain **, rewarding its users universally.**
 
 **Project category:** Social and Unexpected
 
