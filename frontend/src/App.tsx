@@ -7,6 +7,9 @@ declare global {
 import { useState, useEffect } from "react";
 import { Aptos, AptosConfig, Network, Account } from "@aptos-labs/ts-sdk";
 
+import logo from "./assets/aptos_ubi.png";
+import aptos_logo from "./assets/aptos_logo.png";
+
 function App() {
   const [aptos, setAptos] = useState<Aptos | null>(null);
   const [account, setAccount] = useState<Account | null>(null);
@@ -58,15 +61,41 @@ function App() {
 
   return (
     <div className="App">
-      <h1>APTOS</h1>
-      {!isConnected ? (
-        <button onClick={connectWallet}>Connect Wallet</button>
-      ) : (
-        <div>
-          <p>Connected Address: {(account as any)?.address}</p>
-          <p>Balance: {balance} octas</p>
-        </div>
-      )}
+      <header>
+        <a className="text-apt" href="#">
+          <h2 className="text-apt">APTOS UBI</h2>
+        </a>
+        <a
+          href="https://aptosfoundation.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={aptos_logo} alt="Aptos Logo" className="logo-apt" />
+        </a>
+      </header>
+      <section className="center-section">
+        <img src={logo} alt="Aptos UBI Logo" />
+        {!isConnected ? (
+          <section className="wallet-section">
+            <button onClick={connectWallet}>Connect Wallet</button>
+            <a
+              href="https://petra.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Aptos Wallet
+            </a>
+          </section>
+        ) : (
+          <div>
+            <p>Connected Address: {(account as any)?.address}</p>
+            <p>Balance: {balance} octas</p>
+          </div>
+        )}
+        <footer>
+          <p>&copy; Aptos UBI. All Rights Reserved.</p>
+        </footer>
+      </section>
     </div>
   );
 }
