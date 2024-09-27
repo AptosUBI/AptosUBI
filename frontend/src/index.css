@@ -120,6 +120,7 @@ header {
   border: solid 2px rgba(255,255,255,.5);
   border-radius: 15px;
   padding: 15px;
+  margin-top: 15px;
 }
 
 .main-logo {

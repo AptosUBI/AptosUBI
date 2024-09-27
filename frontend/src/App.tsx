@@ -11,6 +11,7 @@ import logo from "./assets/aptos_ubi.png";
 import aptos_logo from "./assets/aptos_logo.png";
 import arrow from "./assets/arrow.png";
 
+import UBI from "./components/UBI.tsx";
 import FAQ from "./components/FAQ.tsx";
 import Social from "./components/Social.tsx";
 import Newsletter from "./components/Newsletter.tsx";
@@ -127,15 +128,29 @@ function App() {
             <p className="text-error">{walletError}</p>
           </section>
         ) : (
-          <div className="container">
-            <p>Connected Address: {(account as any)?.address}</p>
-            <p>
-              Balance: {balance} octas ({Number(balance) / 100000000} APT)
-            </p>{" "}
-            {/* 1 APT = 10,000,000 Octas (or 10e8)  */}
-            <p>Network: {Network.TESTNET}</p>
-            <button onClick={disconnectWallet}>Disconnect</button>
-          </div>
+          <>
+            <div className="container">
+              <p>
+                Connected Address:{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://explorer.aptoslabs.com/account/${
+                    (account as any)?.address
+                  }?network=testnet`}
+                >
+                  {(account as any)?.address}
+                </a>
+              </p>
+              <p>
+                Balance: {balance} octas ({Number(balance) / 100000000} APT)
+              </p>{" "}
+              {/* 1 APT = 10,000,000 Octas (or 10e8)  */}
+              <p>Network: {Network.TESTNET}</p>
+              <button onClick={disconnectWallet}>Disconnect</button>
+            </div>
+            <UBI />
+          </>
         )}
         <FAQ />
         <Newsletter />
