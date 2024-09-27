@@ -11,6 +11,8 @@ import logo from "./assets/aptos_ubi.png";
 import aptos_logo from "./assets/aptos_logo.png";
 import arrow from "./assets/arrow.png";
 
+import FAQ from "./components/FAQ.tsx";
+
 function App() {
   const [aptos, setAptos] = useState<Aptos | null>(null);
   const [account, setAccount] = useState<Account | null>(null);
@@ -106,6 +108,7 @@ function App() {
             <p>Balance: {balance} octas</p>
           </div>
         )}
+        <FAQ />
         <footer>
           <p>&copy; Aptos UBI. All Rights Reserved.</p>
         </footer>

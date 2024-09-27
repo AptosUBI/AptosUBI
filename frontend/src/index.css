@@ -14,7 +14,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -99,4 +99,9 @@ header {
   position: absolute;
   right: 0;
   top: 500px;
+}
+
+.faq-row-wrapper {
+  margin: 60px 80px;
+  background-color: inherit;
 }
