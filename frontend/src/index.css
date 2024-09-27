@@ -103,8 +103,8 @@ header {
 
 .faq-row-wrapper {
   margin: 60px 80px;
-  background-color: #e8dbd2;
-  color: #2b2b2c;
+  background-color: #e8dbd2 !important;
+  color: #2b2b2c !important;
 }
 
 .social-icon {
