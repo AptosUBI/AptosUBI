@@ -9,6 +9,7 @@ import { Aptos, AptosConfig, Network, Account } from "@aptos-labs/ts-sdk";
 
 import logo from "./assets/aptos_ubi.png";
 import aptos_logo from "./assets/aptos_logo.png";
+import arrow from "./assets/arrow.png";
 
 function App() {
   const [aptos, setAptos] = useState<Aptos | null>(null);
@@ -73,8 +74,21 @@ function App() {
           <img src={aptos_logo} alt="Aptos Logo" className="logo-apt" />
         </a>
       </header>
+      <img src={arrow} alt="Arrow Image" className="arrow-img-left" />
+      <img src={arrow} alt="Arrow Image" className="arrow-img-right" />
       <section className="center-section">
         <img src={logo} alt="Aptos UBI Logo" />
+        <h3>
+          Powered by{" "}
+          <a
+            href="https://aptosfoundation.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            APTOS
+          </a>{" "}
+          blockchain
+        </h3>
         {!isConnected ? (
           <section className="wallet-section">
             <button onClick={connectWallet}>Connect Wallet</button>
