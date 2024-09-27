@@ -19,6 +19,7 @@ function App() {
   const [account, setAccount] = useState<Account | null>(null);
   const [balance, setBalance] = useState<string>("0");
   const [isConnected, setIsConnected] = useState<boolean>(false);
+  const [walletError, setWalletError] = useState<string>("");
 
   useEffect(() => {
     const initializeAptos = () => {
@@ -36,12 +37,32 @@ function App() {
         const accountAddress = await window.aptos.account();
         setAccount(accountAddress);
         setIsConnected(true);
+        setWalletError("");
         await updateBalance(accountAddress.address);
       } catch (error) {
         console.error("Error connecting to wallet:", error);
+        setWalletError("Error connecting to wallet: " + error);
       }
     } else {
       console.error("Aptos wallet not found");
+      setWalletError("Aptos wallet not found");
+    }
+  };
+
+  const disconnectWallet = async () => {
+    if (typeof window.aptos !== "undefined") {
+      try {
+        await window.aptos.disconnect();
+        setAccount(null);
+        setIsConnected(false);
+        setWalletError("");
+      } catch (error) {
+        console.error("Error disconnecting from wallet:", error);
+        setWalletError("Error disconnecting from wallet: " + error);
+      }
+    } else {
+      console.error("Aptos wallet not found");
+      setWalletError("Aptos wallet not found");
     }
   };
 
@@ -102,11 +123,17 @@ function App() {
             >
               Download Aptos Wallet
             </a>
+            <p className="text-error">{walletError}</p>
           </section>
         ) : (
-          <div>
+          <div className="container">
             <p>Connected Address: {(account as any)?.address}</p>
-            <p>Balance: {balance} octas</p>
+            <p>
+              Balance: {balance} octas ({Number(balance) / 100000000} APT)
+            </p>{" "}
+            {/* 1 APT = 10,000,000 Octas (or 10e8)  */}
+            <p>Network: {Network.TESTNET}</p>
+            <button onClick={disconnectWallet}>Disconnect</button>
           </div>
         )}
         <FAQ />

@@ -110,3 +110,14 @@ header {
 .social-icon {
   margin: 0 15px;
 }
+
+.text-error {
+  color: #8F6362;
+  font-weight: bold;
+}
+
+.container {
+  border: solid 2px rgba(255,255,255,.5);
+  border-radius: 15px;
+  padding: 15px;
+}
