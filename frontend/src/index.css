@@ -103,5 +103,10 @@ header {
 
 .faq-row-wrapper {
   margin: 60px 80px;
-  background-color: inherit;
+  background-color: #e8dbd2;
+  color: #2b2b2c;
+}
+
+.social-icon {
+  margin: 0 15px;
 }

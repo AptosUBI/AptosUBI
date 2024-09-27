@@ -12,6 +12,7 @@ import aptos_logo from "./assets/aptos_logo.png";
 import arrow from "./assets/arrow.png";
 
 import FAQ from "./components/FAQ.tsx";
+import Social from "./components/Social.tsx";
 
 function App() {
   const [aptos, setAptos] = useState<Aptos | null>(null);
@@ -109,6 +110,7 @@ function App() {
           </div>
         )}
         <FAQ />
+        <Social />
         <footer>
           <p>&copy; Aptos UBI. All Rights Reserved.</p>
         </footer>
