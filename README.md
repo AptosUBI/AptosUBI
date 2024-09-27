@@ -127,3 +127,7 @@ _Possible user authentication with passwordless Passkeys biometrics (facial reco
 [ DLR ] https://bytemaster.medium.com/universal-resource-inheritance-505e7ca4d048
 
 [ CRA ] https://www.cryptoaltruism.org/blog/five-reasons-why-universal-basic-income-ubi-and-cryptocurrency-are-a-perfect-fit
+
+Diagram as of now:
+
+![Diagram](./images/aptos_diagram.png?raw=true "Diagram")
