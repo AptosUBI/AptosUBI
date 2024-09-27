@@ -13,6 +13,7 @@ import arrow from "./assets/arrow.png";
 
 import FAQ from "./components/FAQ.tsx";
 import Social from "./components/Social.tsx";
+import Newsletter from "./components/Newsletter.tsx";
 
 function App() {
   const [aptos, setAptos] = useState<Aptos | null>(null);
@@ -101,7 +102,7 @@ function App() {
       <img src={arrow} alt="Arrow Image" className="arrow-img-left" />
       <img src={arrow} alt="Arrow Image" className="arrow-img-right" />
       <section className="center-section">
-        <img src={logo} alt="Aptos UBI Logo" />
+        <img src={logo} alt="Aptos UBI Logo" className="main-logo" />
         <h3>
           Powered by{" "}
           <a
@@ -137,6 +138,7 @@ function App() {
           </div>
         )}
         <FAQ />
+        <Newsletter />
         <Social />
         <footer>
           <p>&copy; Aptos UBI. All Rights Reserved.</p>

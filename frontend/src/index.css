@@ -121,3 +121,45 @@ header {
   border-radius: 15px;
   padding: 15px;
 }
+
+.main-logo {
+  max-width: 100%;
+}
+
+.newsletter-card {
+  margin-bottom: 100px;
+}
+
+.newsletter-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: transparent !important;
+}
+
+.newsletter-button {
+  padding: 10px;
+  background-color: #2b2b2c;
+  color: #e8dbd2;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.newsletter-alert {
+  margin-top: 1rem;
+  padding: 10px;
+  background-color: #e8dbd2;
+  border: 1px solid gray;
+  border-radius: 4px;
+  color: #2b2b2c;
+  text-align: center;
+}
