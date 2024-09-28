@@ -21,7 +21,7 @@ function FAQ() {
       {
         title: "Why are you building this",
         content:
-          "We started biulding this project for the Aptos Code Collision hackaton 2024 to research possibilities of UBI on Aptos blockchain. More information here: https://dorahacks.io/buidl/16647",
+          "We started building this project for the Aptos Code Collision hackaton 2024 to research possibilities of UBI on Aptos blockchain. More information here: https://dorahacks.io/buidl/16647",
       },
       {
         title: "I have more unanswered questions",
